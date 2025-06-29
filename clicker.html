@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>Clicker!</title>
+<meta charset="utf-8">
+<link rel="shortcut icon" type="image/x-icon" href="https://www.iconarchive.com/download/i95840/iconsmind/outline/Cursor.ico">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Noto+Sans">
+</head>
+<body style="font-family:'Noto Sans',sans-serif,Calibri,Arial;-webkit-user-select: none;ms-user-select:none;user-select:none;"><h1 id="visTitle">Clicker!</h1><p>Clicks: <span id="clicks">0</span></p>
+<p>Clicks per click: <span id="cps">1</span></p>
+<p style="cursor: progress;">Clicks per second: <span id="cpcs">0</span></p>
+<script type="text/javascript">var clicky = document.getElementById("clicks");var cpsy=document.getElementById("cps");var cpcsy=document.getElementById("cpcs");var cpss=1;var cpcss=0;var clickk = 0;var excpc = 0;</script>
+<br>
+<br>
+<div><button style="cursor:pointer;background-color:rgba(255, 255, 255, 0.25);" oncontextmenu="clickk = Number(clickk)+cpss;clicky.innerHTML=clickk;localStorage.setItem('clicks', clickk);return false;" onclick="clickk = Number(clickk)+cpss;clicky.innerHTML=clickk;localStorage.setItem('clicks', clickk);
+" class=button  onmousedown="document.getElementById('ch').height=120;document.getElementById('ch').width=120;" onmouseup="document.getElementById('ch').height=128;document.getElementById('ch').width=128;" title="Click Me!"><img draggable="false" id="ch" src="https://icons.iconarchive.com/icons/hopstarter/soft-scraps/128/Button-Blank-Gray-icon.png" height=128 width=128 alt="Click here!"></button> ⬅ <span style="opacity:0.5;font-size:14px;cursor: not-allowed;">Click there!</span>
+</div>
+<br>
+<br>
+<p><button id="shpDsBtn" style="cursor:pointer;" title="Show Shop" onclick="if(shopCont.style.display=='none'){shopCont.style.display='inline';shpDsBtn.innerHTML='Shop: 🔼';shpDsBtn.title='Hide Shop';}else{shopCont.style.display='none';shpDsBtn.innerHTML='Shop: 🔽';shpDsBtn.title='Show Shop'}">Shop: 🔽</button><span style="display:none;" id="shopCont"><br><br>
+<button style="cursor:pointer" onclick="if(clickk>=50){cpss=cpss+1;localStorage.setItem('clicksps', cpss);clickk=clickk-50;clicky.innerHTML=clickk;cpsy.innerHTML=cpss;}else{window.alert('Sorry, but you don\'t have enough clicks. Try again later.');}">+1 Clicks per Click</button>    
+<button style="cursor:pointer;" onclick="if(clickk>=50){clickk=clickk-50;clicky.innerHTML=clickk;cpcss=cpcss+0;cpcsy.innerHTML=cpcss;window.alert('Ha ha! You fell for it!');window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ');}else{window.alert('Sorry, but you don\'t have enough clicks. Try again later.');}">+1 Clicks per Second</button>
+</span>
+<script type="text/javascript">
+var shpDsBtn=document.getElementById("shpDsBtn");
+var shopCont=document.getElementById("shopCont");
+</script>
+</p>
+<br>
+<br>
+<p style="opacity:0.5;font-size:12px;"><em>Advanced Version: <a href="https://scratch.mit.edu/projects/773687192/embed" target="_blank">Click Here!</a></em></p>
+<p id="noscript">You will be unable to keep track of how many times you clicked the button without counting and the advanced version won't work.<br>- Edward Peng</p>
+<script type="text/javascript">
+document.getElementById("noscript").style.display="none";
+if (Number(localStorage.getItem('clicks'))!=localStorage.getItem('clicks')) {
+localStorage.setItem('clicks', '0');
+} else {
+clickk=localStorage.getItem('clicks');
+clicky.innerHTML=clickk;
+}
+if (Number(localStorage.getItem('clicksps'))!=localStorage.getItem('clicksps')) {
+localStorage.setItem('clicksps', '1');
+} else {
+cpss=Number(localStorage.getItem('clicksps'));
+cpsy.innerHTML=localStorage.getItem('clicksps');
+}
+console.log("JavaScript is enabled. If you're having issues with this, please contact the creator at 54387a@protonmail.com or EdwardPeng13@hotmail.com .");
+</script>
+</body>
+</html>
